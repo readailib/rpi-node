@@ -13,7 +13,7 @@ Base Image
 Define a working directory using `WORKDIR <directory>` to ensure that all future commands are executed from the directory relative to our application.
 
 ```Dockerfile
-FROM node:7-alpine
+FROM node
 RUN mkdir -p /src/app
 WORKDIR /src/app
 ```
