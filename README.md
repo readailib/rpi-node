@@ -46,7 +46,7 @@ EXPOSE 3000
 CMD [ ”npm”, ”start” ]
 ```
 
-Building Launching Container
+Building and Launching Container
 -----------------------------------
 
 To launch your application inside the container you first need to build an image.
