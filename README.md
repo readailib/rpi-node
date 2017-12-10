@@ -23,6 +23,7 @@ NPM Install
 ----------------------------------
 
 Install the dependencies required to run the application
+
 ```Dockerfile
 COPY package.json /src/app/package.json
 RUN npm install
@@ -32,11 +33,11 @@ RUN npm install
 Configuring Application
 ----------------------------
 
-We can copy the entire directory where our Dockerfi le is using `COPY . <dest dir>`.
+We can copy the entire directory where our Dockerfile is using `COPY . <dest dir>`.
 Once the source code has been copied, the ports the application requires to be accessed is
-defi ned using `EXPOSE <port>`.
+defined using `EXPOSE <port>`.
 Finally, the application needs to be started. Once neat trick when using Node.js is to use the
-`npm start` command. This looks in the package.json fi le to know how to launch the application
+`npm start` command. This looks in the package.json file to know how to launch the application
 saving duplication of commands.
 
 ```Dockerfile
@@ -48,7 +49,7 @@ CMD [ ”npm”, ”start” ]
 Building Launching Container
 -----------------------------------
 
-To launch your application inside the container you fi rst need to build an image.
+To launch your application inside the container you first need to build an image.
 
 The command to build the image is
 
